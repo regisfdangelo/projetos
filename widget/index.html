@@ -15,8 +15,10 @@
         <section>
             <h3>Saldo Atual</h3>
             <div class="saldoatual">
-                <h1>R$ 2.550,00 </h1>
-                <i class="material-icons">visibility_off</i>
+
+                <p id="numero">R$255.000</p>
+                <button onclick="toggleNumero()"><i class="material-icons">home</i></button>
+
             </div> 
             <article>
                 <div class="botao">                        
@@ -36,6 +38,22 @@
                     </div>
             </article>
         </section>        
-    </main>    
+    </main> 
+    <script>
+        let visivel = true;
+
+        function toggleNumero() {
+        const el = document.getElementById("numero");
+
+        if (visivel) {
+            el.textContent = "******";
+        } else {
+            el.textContent = "R$255.000";
+        }
+
+        visivel = !visivel;
+        }
+    </script>
+    
 </body>
 </html>
